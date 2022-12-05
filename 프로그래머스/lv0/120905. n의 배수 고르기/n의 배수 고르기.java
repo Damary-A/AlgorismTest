@@ -1,21 +1,9 @@
+import static java.util.Arrays.stream;
+
 class Solution {
     public int[] solution(int n, int[] numlist) {
-        int answerSize = 0;
+        int[] answer = stream(numlist).filter(i -> i % n ==0).toArray();
 
-        for (int i : numlist) {
-            if (i % n == 0) {
-                answerSize++;
-            }
-        }
-
-        int[] answer = new int[answerSize];
-        int answerIdx = 0;
-        for (int i : numlist) {
-            if (i % n == 0) {
-                answer[answerIdx] = i;
-                answerIdx++;
-            }
-        }
         return answer;
     }
 }
