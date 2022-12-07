@@ -1,6 +1,6 @@
 class Solution {
     public int[] solution(String[] keyinput, int[] board) {
-int x = 0;
+        int x = 0;
         int y = 0;
 
         int MaxX = (board[0]-1)/2;
@@ -10,36 +10,19 @@ int x = 0;
 
             switch (move) {
                 case "right":
-                    if (x == MaxX) {
+                    if (x < MaxX) {x++;}
                         break;
-                    } else {
-                        x++;
-                        break;
-                    }
                 case "left":
-                    if (x == -MaxX) {
+                    if (x > -MaxX) {x--;}
                         break;
-                    } else {
-                        x--;
-                        break;
-                    }
                 case "up":
-                    if (y == MaxY) {
+                    if (y < MaxY) {y++;}
                         break;
-                    } else {
-                        y++;
-                        break;
-                    }
                 case "down":
-                    if (y == -MaxY) {
-                        break;
-                    } else {
-                        y--;
-                        break;
-                    }
+                    if (y > -MaxY) {y--;}
+                    break;
             }
         }
-
         int[] answer = {x, y};
 
         return answer;
