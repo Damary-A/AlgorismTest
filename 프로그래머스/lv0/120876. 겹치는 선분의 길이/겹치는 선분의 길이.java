@@ -29,7 +29,6 @@ class Solution {
             if (start3 > end2) {
                 emptySpace[0] = start3 - end2;
             }
-
             if (start2 > end1) {
                 emptySpace[0] = start2 - end1;
             }
